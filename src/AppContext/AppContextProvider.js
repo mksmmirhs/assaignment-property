@@ -22,7 +22,6 @@ const AppContextProvider = ({ children }) => {
   const filterDataByCity = (data, city) => {
     return data.filter(property => property.city === city);
   };
-  console.log(uiData);
   const contextInfo = {
     selectedFilter,
     setSelectedFilter,

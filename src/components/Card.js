@@ -17,6 +17,7 @@ const Card = ({ property }) => {
     no_of_baths,
     area,
     rent_per_month,
+    id,
   } = property;
   return (
     <div className="relative max-w-[460px]">
@@ -74,7 +75,10 @@ const Card = ({ property }) => {
               )}
             </div>
             <div>
-              <Link className="border border-[#4035e0] p-4 rounded-full text-[#4035e0] h-[40px] w-[120px] flex items-center justify-center ">
+              <Link
+                to={`http://localhost:3000/property/${id}`}
+                className="border border-[#4035e0] p-4 rounded-full text-[#4035e0] h-[40px] w-[120px] flex items-center justify-center "
+              >
                 Read More
               </Link>
             </div>
