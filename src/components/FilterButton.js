@@ -2,9 +2,19 @@ import React, { useContext } from 'react';
 import { AppContext } from '../AppContext/AppContextProvider';
 
 const FilterButton = ({ cityName }) => {
-  const { selectedFilter, setSelectedFilter } = useContext(AppContext);
+  const {
+    selectedFilter,
+    setSelectedFilter,
+    filterDataByCity,
+    allData,
+    setFilterData,
+    setUiData,
+  } = useContext(AppContext);
   const clickedFilterHandler = () => {
     setSelectedFilter(cityName);
+    const filter = filterDataByCity(allData, cityName);
+    setFilterData(filter);
+    setUiData(filter.slice(0, 6));
   };
   return (
     <div>
