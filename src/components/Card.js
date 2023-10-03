@@ -76,7 +76,7 @@ const Card = ({ property }) => {
             </div>
             <div>
               <Link
-                to={`http://localhost:3000/property/${id}`}
+                to={`/property/${id}`}
                 className="border border-[#4035e0] p-4 rounded-full text-[#4035e0] h-[40px] w-[120px] flex items-center justify-center "
               >
                 Read More
